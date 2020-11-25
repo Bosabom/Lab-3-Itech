@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+   <head>
+<meta charset="utf-8" />
+  </head>
+  <body>
+    <script>
+        day = new Date();
+        hour = day.getHours();
+        if (hour >= 6 && hour < 16) {
+     
+          document.body.style.backgroundColor="white";
+         
+        } else {
+        
+          document.body.style.backgroundColor="grey";
+        };
+    </script>
+     <script>
+        function Get_Random_Index(min, max)
+         {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+      </script>
+    <script>
+        function Begin_Process(){
+           var MLseconds = prompt("Введите интервал для повторений картинок:","");
+            images=new Array();
+      images[0]="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6LWjbb-07Z2Vkx3c2AUhuL7IfGQkXzne78Q&usqp=CAU";
+      images[1]="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS3PLdTL1GofnuMSjsbT-tlC2EPGOm6y-8VA&usqp=CAU";
+      images[2]="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx_6pl4BpwIPYiEN_FDQktFibxsxo24Iux6w&usqp=CAU";
+      images[3]="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxtE78FdIAIDNZb6dtKOpCiEmpZAvT-JGKgQ&usqp=CAU";
+      images[4]="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvdTisDn5wsuQUZV-V3UfMXCb8Rrlv4CJSFw&usqp=CAU";
+      images[5]="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9n-SC_4m6mkI2ZHAWw581mirndQ_WrjACug&usqp=CAU";
+      images[6]="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPztvtH4TPre3tNcpeZIHTXyzTLeyfDkte0g&usqp=CAU";
+      images[7]="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReupeNQXOvDWnvC4xwBzbhKGXbu5KzaBck8w&usqp=CAU";
+      images[8]="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoiDflq_cduL62ZLQ_ih4Mp04B2mxK3AgC2w&usqp=CAU";
+      images[9]="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7GNIh8uNMY2840GtQMidTj8vqTy4N6DAxkQ&usqp=CAU";
+       setInterval(" document.images['Image'].src=images[Get_Random_Index(0,9)];",MLseconds); 
+        }
+    </script>
+    <p style="position: absolute; top: 25%;color: white;">Нажмите на кнопку, чтобы начать процесс!</p>
+    <a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBD3ED7nbFUuVgeNVg2lg9vGwCwYSL7cKXLQ&usqp=CAU" id="Image" style="position: absolute;top: 30%; left: 30%;"></a>
+    <form>
+        <input type="button" value="Тык сюда" id="Ourbutton" style="position: fixed; top: 35%;left: 5%;" onclick='Begin_Process()'>
+    </form>
+  <script>
+  </script> 
+  </body>
+</html>
